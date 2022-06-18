@@ -5,7 +5,7 @@
   & > h1 {
     width: 174px;
     height: 29px;
-    font-family: Lato;
+    font-family: "Lato";
     font-size: 24px;
     font-weight: bold;
     font-stretch: normal;
@@ -17,12 +17,11 @@
   }
 }
 .container {
-  background-color: $white-two;
-  height: 1000px;
-  width: 100%;
-  padding-right: 338px;
+  background-color: #f7f7f7;
+  padding: 10px;
+  overflow: hidden;
+  height: 100vh;
+  width: 850px;
   padding-left: 70px;
   padding-top: 30px;
-  & > .content {
-  }
 }

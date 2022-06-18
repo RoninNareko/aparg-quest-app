@@ -1,0 +1,8 @@
+.actionsBar {
+  & > .buttons {
+    display: flex;
+    & > button {
+      margin-right: 6px;
+    }
+  }
+}

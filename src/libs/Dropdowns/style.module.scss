@@ -1,0 +1,104 @@
+.dropdown {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  text-align: left;
+  justify-content: space-between;
+  width: 172px;
+  height: 40px;
+  border-radius: 3px;
+  margin-right: 5px;
+  background-color: #fff;
+  &:hover .dropdownContent {
+    display: block;
+  }
+}
+.checkbox {
+  margin-right: 0 !important;
+  & > span > svg {
+    fill: #3971c1;
+  }
+  & > span {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #292929;
+  }
+}
+.dropdownContent {
+  display: block;
+  position: absolute;
+  width: 188px;
+  min-height: 241px;
+  top: 46px;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  & > .itemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  & > p {
+    width: 100%;
+    height: 16px;
+    margin: 0 67px 15px 0;
+    font-family: Lato;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #292929;
+  }
+}
+
+.splitButton {
+  height: fit-content;
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  & > button {
+    width: 31px;
+    background: white;
+    color: #8c8c8c;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 3px;
+    &:hover {
+      background: #f7f7f7;
+    }
+  }
+}
+.dropdownTitles {
+  padding: 5px 10px 4px;
+  display: flex;
+  flex-direction: column;
+  & > p {
+    font-size: 13px;
+    margin: 0 !important;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #292929;
+  }
+  & > span {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: #666;
+  }
+}

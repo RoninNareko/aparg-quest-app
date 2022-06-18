@@ -1,0 +1,21 @@
+.button {
+  width: 100px;
+  height: 40px;
+  padding: 11px 13px !important;
+  border-radius: 3px !important;
+  font-size: 13px;
+  border: solid 1px #e0e0e0 !important;
+  font-family: "Lato" !important;
+  text-transform: capitalize !important;
+  background-color: #fff !important;
+  color: #292929 !important;
+  font-weight: bold !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  & i {
+    font-size: 18px !important;
+    color: #3971c1 !important;
+  }
+}

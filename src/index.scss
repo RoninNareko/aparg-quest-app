@@ -1,12 +1,25 @@
 @import "./assets/_colors.scss";
 
 body {
-  background-color: $white-two;
+  background-color: #eeeeee;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
 }
+
+section {
+  position: relative;
+}
+
 button {
   outline: none;
   border: none;
 }
+
 * {
   margin: 0;
   padding: 0;

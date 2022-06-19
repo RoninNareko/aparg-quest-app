@@ -18,6 +18,6 @@ export const FilterButton = () => (
     variant="outlined"
     startIcon={<i className="fas fa-filter"></i>}
   >
-    Refresh
+    Filter
   </Button>
 );

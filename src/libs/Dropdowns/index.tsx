@@ -1,10 +1,10 @@
 import { Checkbox, FormControlLabel } from "@mui/material";
+import { useState } from "react";
 import styles from "./style.module.scss";
 
 interface IProps {
   title?: string;
   description: string;
-  isOpen?: boolean;
 }
 
 const Item = () => {
@@ -50,7 +50,8 @@ const DropDownContent = ({ description }: IProps) => {
   );
 };
 
-export const Select = ({ title, description, isOpen = false }: IProps) => {
+export const Select = ({ title, description }: IProps) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={styles.dropdown}>
       <div className={styles.dropdownTitles}>
@@ -58,7 +59,7 @@ export const Select = ({ title, description, isOpen = false }: IProps) => {
         <span>{description}</span>
       </div>
       <div className={styles.splitButton}>
-        <button>
+        <button onMouseDown={() => setIsOpen(!isOpen)}>
           <i className="fas fa-chevron-down"></i>
         </button>
       </div>

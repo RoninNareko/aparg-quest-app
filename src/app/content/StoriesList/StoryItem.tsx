@@ -1,6 +1,10 @@
 import { Button } from "@mui/material";
 import styles from "./styles.module.scss";
 
+interface IProps {
+  item: any;
+}
+
 const Actions = () => {
   return (
     <section className={styles.actionsBlock}>
@@ -13,49 +17,34 @@ const Actions = () => {
     </section>
   );
 };
-const Content = () => {
+const Content = ({ item }: IProps) => {
   return (
     <section className={styles.contentBlock}>
-      <a href="/#" target="_blank">
-        Intel Corporation (NASDAQ:INTC), Apple Inc. (NASDAQ:AAPL) - Intel
-        Analyst Plays Down Beat-and-Raise Quarter Amid Caution Over Second-Half
-        Fundamentals
-      </a>
+      <a href={item.url}>{item.title}</a>
       <div className={styles.description}>
-        <p>
-          Hours after receiving a record $5 billion FTC fine on privacy
-          violations, Facebook delivered a Q2 earnings beat with revenue of
-          $16.9 billion with $1.99 adjusted EPS compared to the Zacks Consensus
-          Estimate of $1.90 EPS on revenue of $16.45 billion.
-        </p>
+        <p>{item.description}</p>
       </div>
       <div className={styles.fioContainer}>
         <div className={styles.miniAutorImage}>
-          <img
-            src="https://blog.twnic.tw/wp-content/uploads/2021/11/1108-1112_Facebook-%E5%B0%87%E6%9B%B4%E5%90%8D%E7%82%BA-Meta.jpg"
-            alt="title img"
-          />
+          <img src={item.author_image_url} alt="title img" />
         </div>
         <p>
           <i className="fab fa-twitter"></i>
         </p>
-        <p>@GeorgeMentz5</p>
-        <p>16 h</p>
+        <p>{item.author_screen_name}</p>
+        <p>{item.publishTime} h</p>
       </div>
     </section>
   );
 };
 
-const ItemContent = () => {
+const ItemContent = ({ item }: IProps) => {
   return (
     <div className={styles.content}>
       <section className={styles.photoContainer}>
-        <img
-          src="https://blog.twnic.tw/wp-content/uploads/2021/11/1108-1112_Facebook-%E5%B0%87%E6%9B%B4%E5%90%8D%E7%82%BA-Meta.jpg"
-          alt="title img"
-        />
+        <img src={item.imageUrls && item.imageUrls[0]} alt="title img" />
       </section>
-      <Content />
+      <Content item={item} />
       <Actions />
     </div>
   );
@@ -77,10 +66,10 @@ const Footer = () => {
   );
 };
 
-const StoryItem = () => {
+const StoryItem = ({ item }: IProps) => {
   return (
     <section className={styles.storyItem}>
-      <ItemContent />
+      <ItemContent item={item} />
       <Footer />
     </section>
   );

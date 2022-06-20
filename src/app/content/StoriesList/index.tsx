@@ -10,14 +10,15 @@ const StoriesList = () => {
   const list = useSelector((state: RootState) => state.listReducer.list);
   const loading = useSelector((state: RootState) => state.listReducer.loading);
   const error = useSelector((state: RootState) => state.listReducer.error);
-  console.log(list, loading);
+
   useEffect(() => {
-    dispatch(getStoryList());
+    dispatch(getStoryList(null));
   }, [dispatch]);
+
   return (
     <section className={styles.storiesContainer}>
       <div className={styles.container}>
-        {list && list.length ? (
+        {!loading && list.length ? (
           list.map((item, idx) => <StoryItem key={idx} item={item} />)
         ) : loading ? (
           <div>Loading...</div>

@@ -14,7 +14,7 @@ export interface Store {
         error: null,
         list: [],
     }
-    filter:IFilter
+    filterReducer:IFilter
 }
 
 export type actionsTypes = GetStoryListActionDataType | FilterDataType;
